@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Itim', sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  background-image: url('wallpaper.png'); /* Your background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Keeps the background fixed while scrolling */
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('wallpaper.png'); /* Your background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(10px); /* Apply blur to the background image */
+  z-index: -1; /* Ensure the background stays behind the content */
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.profile-card {
+  width: 50%; /* Slightly narrower */
+  max-width: 900px;
+  border-radius: 20px;
+  display: block;
+  padding: 20px;
+  position: relative;
+  z-index: 1; /* Keeps the profile card above the background */
+}
+
+.header {
+  background-color: #E5DDBC; /* Light background for the header */
+  padding: 30px;
+  border-radius: 20px 20px 0 0; /* Rounded top corners */
+  border-bottom: 2px solid #4d4d4d;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Ensure space between profile info and avatar */
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the left */
+}
+
+.profile-info h1 {
+  font-size: 24px;
+  font-weight: 200;
+  margin-bottom: 5px;
+}
+
+.profile-info p {
+  font-size: 14px;
+  color: #302f2f;
+}
+
+.avatar-container {
+  margin-left: 20px; /* Space between profile info and avatar */
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.social-icons {
+  display: flex;
+  margin-top: 10px;
+}
+
+.icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+}
+
+.icon-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px; /* Size of the rounded square */
+  height: 35px; /* Size of the rounded square */
+  background-color: #FFCA89; /* Light gray background color */
+  border-radius: 10px; /* Rounds the corners to create a rounded square */
+  border: 1px solid #000000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+  transition: all 0.3s ease; /* Smooth hover effects */
+}
+
+/* Hover Effects */
+.icon-background:hover {
+  background-color: #FFF2A4; /* Blue background on hover */
+}
+
+.icon svg {
+  width: 50%;
+  height: 100%;
+  fill: #FFCA89;
+  margin-left: 2px;
+}
+
+.icon:hover svg {
+  fill: #FFF2A4; /* Darken the icon color on hover */
+}
+
+.body {
+  background-color: #E5DDBC; /* White background for the body */
+  padding: 20px;
+  border-radius: 0 0 20px 20px; /* Rounded bottom corners */
+  line-height: 1; /* Set line-height to 1 for body text */
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.icon-heart svg {
+  width: 22px; /* Icon size */
+  height: 22px; /* Icon size */
+  vertical-align: middle; /* Aligns the icon with the text */
+  margin-right: 9px; /* Adds space between the icon and the text */
+}
+
+.section h2 .icon-rocket {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1px;  
+}
+
+.section h2 .icon-rocket svg {
+  width: 23px; /* SVG icon size */
+  height: 23px;
+  fill: #FFCA89;
+  stroke: #000000; /* Icon color */
+}
+
+.section-title {
+  display: flex; /* Enables flexbox for alignment */
+  align-items: center; /* Aligns icon and text vertically */
+  font-size: 20px; /* Ensures the text size is consistent */
+  color: #000000;
+  font-weight: 500;
+}
+
+.section-title .icon-rocket svg {
+  width: 20px; /* Icon size */
+  height: 20px; /* Icon size */
+  margin-right: 8px; /* Space between the icon and the text */
+  stroke: #000000; /* Default icon color */
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #030303;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  font-size: 14px;
+  color: #2b2a2a;
+  line-height: 2;
+  padding-left: 20px;
+  font-weight: 100;
+  font-stretch: ultra-condensed; /* Makes the font appear thinner */
+}
+
+ul li::before {
+  content: " •"; /* Adds a bullet before each item */
+  color: #000000; /* Optional: Change color of the bullet */
+  margin-right: 10px; /* Adds space between the bullet and the text */
+  margin-left: -5px; /* Optional: Adjust the bullet position */
+}
+
+ul li strong {
+  font-size: 16px;
+  color: #000000;
+  font-weight: 500; /* Makes the text thinner */
+}
+
+.link {
+  color: #0077b6;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+#live-time {
+  font-size: 14px;
+  font-weight: 500;
+  color: #000000;
+}
