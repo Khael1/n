@@ -1,5 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+@media (max-width: 768px) {
+  .profile-card {
+    width: 90%; /* Adjust card width for smaller screens */
+    padding: 15px;
+  }
 
+  .header {
+    flex-direction: column; /* Stack content vertically */
+    align-items: center;
+    text-align: center; /* Center text */
+  }
+
+  .avatar-container {
+    margin-left: 0; /* Remove margin for centered avatar */
+    margin-top: 15px; /* Add space between sections */
+  }
+
+  .avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .social-icons {
+    justify-content: center; /* Center icons */
+    margin-top: 20px;
+  }
+
+  .icon {
+    margin-right: 10px; /* Reduce spacing */
+  }
+
+  .body {
+    padding: 10px; /* Reduce padding for smaller screens */
+    font-size: 14px; /* Adjust text size */
+  }
+
+  ul li {
+    font-size: 12px; /* Adjust list font size */
+  }
+
+  h2 {
+    font-size: 16px; /* Adjust headings */
+  }
+
+  .link {
+    font-size: 14px; /* Adjust link size */
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -81,6 +128,7 @@ body::before {
 }
 
 .avatar {
+  max-width: 100px;
   width: 80px;
   height: 80px;
   border-radius: 50%;
