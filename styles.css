@@ -150,7 +150,7 @@ body::after {
     align-items: flex-start; /* Align to the left */
     justify-content: center; /* Vertically center the text */
     height: 100%; /* Optional: Ensure consistent height for centering */
-    margin-left: -35px;
+    margin-left: -10px;
   }
 
   /* Avatar adjustment */
@@ -211,8 +211,8 @@ body::after {
   }
 
   .avatar {
-    width: 50px;
-    height: 50px;
+    width: 65px;
+    height: 65px;
   }
 
   .profile-info h1 {
