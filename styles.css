@@ -127,6 +127,98 @@ body::after {
   transition: all 0.3s ease; /* Smooth hover effects */
 }
 
+@media (max-width: 768px) {
+  /* Adjust Profile Card */
+  .profile-card {
+    width: 90%; /* Make it wider on small screens */
+    margin-top: 50px;
+    padding: 15px;
+  }
+
+  /* Make header items stack vertically on mobile */
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Avatar adjustment */
+  .avatar-container {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .avatar {
+    width: 60px;
+    height: 60px;
+  }
+
+  /* Adjust profile info text */
+  .profile-info h1 {
+    font-size: 20px; /* Smaller text */
+  }
+
+  .profile-info p {
+    font-size: 12px;
+  }
+
+  /* Social icons - stack vertically */
+  .social-icons {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+  }
+
+  .icon {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  /* Sections layout */
+  .section {
+    margin-bottom: 15px;
+  }
+
+  .section h2 {
+    font-size: 16px; /* Adjust heading size */
+  }
+
+  ul li {
+    font-size: 12px; /* Adjust list text size */
+  }
+
+  ul li strong {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Adjust further for very small devices */
+  .profile-card {
+    padding: 10px;
+  }
+
+  .avatar {
+    width: 50px;
+    height: 50px;
+  }
+
+  .profile-info h1 {
+    font-size: 18px;
+  }
+
+  .profile-info p {
+    font-size: 11px;
+  }
+
+  .section-title {
+    font-size: 16px;
+  }
+
+  ul li {
+    font-size: 11px;
+  }
+}
+
 /* Hover Effects */
 .icon-background:hover {
   background-color: #FFF2A4; /* Blue background on hover */
