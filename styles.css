@@ -1,56 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
-@media (max-width: 768px) {
-  .profile-card {
-    width: 90%; /* Adjust card width for smaller screens */
-    padding: 15px;
-  }
 
-  .header {
-    flex-direction: column; /* Stack content vertically */
-    align-items: center;
-    text-align: center; /* Center text */
-  }
-
-  .avatar-container {
-    margin-left: 0; /* Remove margin for centered avatar */
-    margin-top: 15px; /* Add space between sections */
-  }
-
-  .avatar {
-    width: 100px;
-    height: 100px;
-  }
-
-  .social-icons {
-    justify-content: center; /* Center icons */
-    margin-top: 20px;
-  }
-
-  .icon {
-    margin-right: 10px; /* Reduce spacing */
-  }
-
-  .body {
-    padding: 10px; /* Reduce padding for smaller screens */
-    font-size: 14px; /* Adjust text size */
-  }
-
-  ul li {
-    font-size: 12px; /* Adjust list font size */
-  }
-
-  h2 {
-    font-size: 16px; /* Adjust headings */
-  }
-
-  .link {
-    font-size: 14px; /* Adjust link size */
-  }
-}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -58,11 +15,10 @@ body {
   margin: 0;
   padding: 0;
   position: relative;
-  height: 100vh;
+  min-height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  min-height: 100%;
+  align-items: flex-start;
   background-image: url('wallpaper.png'); /* Your background image */
   background-size: cover;
   background-position: center;
@@ -83,17 +39,29 @@ body::before {
   background-repeat: no-repeat;
   filter: blur(10px); /* Apply blur to the background image */
   z-index: -1; /* Ensure the background stays behind the content */
-  background-color: rgba(0, 0, 0, 1);
+  background-attachment: fixed;
+}
+
+body::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Darken the blurred background */
+  z-index: -1; /* Ensure the overlay stays above the blurred background */
 }
 
 .profile-card {
   width: 50%; /* Slightly narrower */
   max-width: 900px;
-  border-radius: 20px;
+  border-radius: 10px; /* Rounded corners for the entire profile card */
   display: block;
   padding: 20px;
   position: relative;
   z-index: 1; /* Keeps the profile card above the background */
+  margin-top: 130px;
 }
 
 .header {
@@ -128,10 +96,9 @@ body::before {
 }
 
 .avatar {
-  max-width: 100px;
   width: 80px;
   height: 80px;
-  border-radius: 50%;
+  border-radius: 15px;
   object-fit: cover;
 }
 
@@ -181,6 +148,12 @@ body::before {
   padding: 20px;
   border-radius: 0 0 20px 20px; /* Rounded bottom corners */
   line-height: 1; /* Set line-height to 1 for body text */
+  margin-top: 15px; /* Add a 15px margin from the header */
+}
+
+.profile-card .header,
+.profile-card .body {
+  border-radius: 20px; /* Apply rounded square corners to both sections */
 }
 
 .section {
