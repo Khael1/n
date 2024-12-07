@@ -72,12 +72,14 @@ body::after {
   display: flex;
   align-items: center;
   justify-content: space-between; /* Ensure space between profile info and avatar */
+  flex-wrap: wrap;
 }
 
 .profile-info {
   display: flex;
   flex-direction: column;
   align-items: flex-start; /* Align items to the left */
+  margin-right: 20px;
 }
 
 .profile-info h1 {
@@ -127,7 +129,7 @@ body::after {
   transition: all 0.3s ease; /* Smooth hover effects */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   /* Adjust Profile Card */
   .profile-card {
     width: 90%; /* Make it wider on small screens */
@@ -139,6 +141,12 @@ body::after {
   .header {
     flex-direction: column;
     align-items: center;
+  }
+
+  .profile-info {
+    align-items: center; /* Center text on mobile */
+    text-align: center; /* Center align text */
+    margin-right: 0; /* Remove margin-right */
   }
 
   /* Avatar adjustment */
