@@ -141,12 +141,16 @@ body::after {
   .header {
     flex-direction: column;
     align-items: center;
+    height: 130px;
   }
 
   .profile-info {
-    align-items: center; /* Center text on mobile */
-    text-align: center; /* Center align text */
-    margin-right: 0; /* Remove margin-right */
+    display: flex;
+    flex-direction: column; /* Keep the text stacked vertically */
+    align-items: flex-start; /* Align to the left */
+    justify-content: center; /* Vertically center the text */
+    height: 100%; /* Optional: Ensure consistent height for centering */
+    margin-left: -35px;
   }
 
   /* Avatar adjustment */
@@ -161,24 +165,25 @@ body::after {
   }
 
   /* Adjust profile info text */
-  .profile-info h1 {
-    font-size: 20px; /* Smaller text */
-  }
-
+  .profile-info h1,
   .profile-info p {
-    font-size: 12px;
-  }
+    margin: 0; /* Remove default margins to avoid misalignment */
+}
 
   /* Social icons - stack vertically */
   .social-icons {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 15px;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
   }
 
   .icon {
-    margin-right: 0;
     margin-bottom: 10px;
+  }
+
+  .icon:last-child {
+    margin-bottom: 0; /* Remove spacing after the last icon */
   }
 
   /* Sections layout */
