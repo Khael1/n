@@ -102,6 +102,7 @@ body::after {
   height: 80px;
   border-radius: 15px;
   object-fit: cover;
+  pointer-events: none;
 }
 
 .social-icons {
