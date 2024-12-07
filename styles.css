@@ -240,7 +240,6 @@ body::after {
 .icon svg {
   width: 50%;
   height: 100%;
-  fill: #FFCA89;
   margin-left: 2px;
 }
 
@@ -337,7 +336,7 @@ ul li strong {
 }
 
 .link {
-  color: #0077b6;
+  color: #0080c5;
   text-decoration: none;
 }
 
@@ -349,4 +348,73 @@ ul li strong {
   font-size: 14px;
   font-weight: 500;
   color: #000000;
+}
+
+
+.social-accounts {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #E5DDBC;
+  border-radius: 10px;
+  font-family: 'Itim', cursive;
+  color: #333;
+}
+
+/* Title */
+.social-accounts h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #2a2a2a;
+  font-family: 'Itim', cursive;
+}
+
+/* Grid layout for icons */
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Adjust the number of columns */
+  gap: 10px;
+  margin: 15px 0;
+}
+
+/* Individual icon item */
+.icon-item {
+  text-align: center;
+  padding: 10px;
+  background: #FFCA89;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.icon-item img {
+  max-width: 40px;
+  height: auto;
+  margin-bottom: 8px;
+}
+
+.icon-item span {
+  display: block;
+  font-size: 1rem;
+  color: #292828;
+}
+
+/* Hover effect */
+.icon-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Social info text */
+.social-info {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #1f1f1f;
+}
+
+/* Alerts or notes */
+.social-info p strong {
+  color: #222222; /* Highlighted important text */
 }
