@@ -1,4 +1,5 @@
 // Function to update the live time and emoji
+
 function updateLiveTime() {
   // Create a new Date object
   const now = new Date();
