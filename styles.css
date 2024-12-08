@@ -419,3 +419,38 @@ ul li strong {
 .social-info p strong {
   color: #222222; /* Highlighted important text */
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .icon-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for tablets */
+    gap: 15px; /* Adjust spacing for better alignment */
+  }
+
+  .icon-item img {
+    max-width: 30px; /* Slightly smaller icons for smaller screens */
+  }
+
+  .icon-item span {
+    font-size: 0.9rem; /* Adjust text size */
+  }
+}
+
+@media (max-width: 480px) {
+  .icon-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile */
+    gap: 10px; /* Compact spacing */
+  }
+
+  .icon-item {
+    padding: 8px; /* Adjust padding for compact view */
+  }
+
+  .icon-item img {
+    max-width: 25px; /* Smaller icons */
+  }
+
+  .icon-item span {
+    font-size: 0.8rem; /* Adjust text size */
+  }
+}
